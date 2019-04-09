@@ -1,8 +1,17 @@
-import React from 'react'; //importacion de react en el archivo
+import React from 'react';
+import Location from './Location'
+import WeatherData from './WeatherData'
 
-const WeatherLocation = () => ( //codigo con react, Componente funcional
-    <div>Weather Location</div>
-);
-
-
+const WeatherLocation = () => (
+                                <div>
+                                    <Location>
+                                    </Location>
+                                    <WeatherData/>
+                                </div>
+                                );
 export default WeatherLocation;
+
+
+
+
+
