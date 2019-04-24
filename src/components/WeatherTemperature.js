@@ -1,17 +1,24 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
+import {CLOUD,CLOUDY, SUN, SNOW, RAIN, WINDY} from "../constants/weather";
 
 const icons = {
-    sunny : "day-sunny",
-    fog: "day-fog",
-}
+    [CLOUD]: "cloud",
+    [CLOUDY]: "cloudy",
+    [SUN]: "day-sunny",
+    [RAIN]: "rain",
+    [SNOW]: "snow",
+    [WINDY]: "windy"
+};
+
+
 const getWeatherIcon = weatherState => {
     const icon = icons[weatherState];
 
-    if(icon)
-        return <WeatherIcons name={icon} size="2x"/>
+    if (icon)
+        return <WeatherIcons name={icon} size="2x" />;
     else
-        return <WeatherIcons name={"day-sunny"} size="2x"/>
+        return <WeatherIcons name={"day-sunny"} size="2x" />;
 }
 const WeatherTemperature = ({temperature, weatherState }) => (
 
@@ -20,7 +27,8 @@ const WeatherTemperature = ({temperature, weatherState }) => (
             getWeatherIcon(weatherState)
 
         }
-        <span>{ `${ temperature } Cº` }</span>
+
+        <span>{ `${ weatherState } Cº` }</span>
     </div>
 );
 
