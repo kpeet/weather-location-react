@@ -1,10 +1,10 @@
 import React from 'react';
-import Location from './Location'
-import WeatherData from './WeatherData'
+import Location from './WeatherLocation/Location'
+import WeatherData from './WeatherLocation/WeatherData/index'
 
 const WeatherLocation = () => (
                                 <div>
-                                    <Location>
+                                    <Location city={"Barcelona"}>
                                     </Location>
                                     <WeatherData/>
                                 </div>
