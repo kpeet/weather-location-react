@@ -1,9 +1,10 @@
 import React from 'react';
-import Location from './WeatherLocation/Location'
-import WeatherData from './WeatherLocation/WeatherData/index'
+import Location from './Location'
+import WeatherData from './WeatherData/index'
+import  './styles.css';
 
 const WeatherLocation = () => (
-                                <div>
+                                <div className="locationCont">
                                     <Location city={"Barcelona"}>
                                     </Location>
                                     <WeatherData/>
