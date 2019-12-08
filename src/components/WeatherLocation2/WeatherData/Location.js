@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import './styles.css'
 
 
 const Location = (props) => {
@@ -13,7 +14,7 @@ const Location = (props) => {
     console.log(props)
     //debugger;
 
-    return (<div><h1>{city} <br/> Buenos Aires</h1></div>)
+    return (<div className="locationCont"><h1>{city}</h1></div>)
 };
 
 Location.propTypes ={
