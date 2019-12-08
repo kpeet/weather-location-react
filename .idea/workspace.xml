@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4593de89-6b0e-49e0-a2ca-a30577f5fb8e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/constants/api_url.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/services/transformWeather.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherLocation2/index.js" afterPath="$PROJECT_DIR$/src/components/WeatherLocation2/index.js" />
     </list>
@@ -16,15 +14,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="438">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <marker date="1575833939000" expanded="true" signature="1402:1598" ph="..." />
-                <marker date="1575833939000" expanded="true" signature="1446:1592" ph="..." />
-                <marker date="1575833939000" expanded="true" signature="1493:1592" ph="..." />
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1575834483000" expanded="true" signature="1541:1737" ph="..." />
+                <marker date="1575834483000" expanded="true" signature="1585:1731" ph="..." />
+                <marker date="1575834483000" expanded="true" signature="1632:1731" ph="..." />
               </folding>
             </state>
           </provider>
@@ -52,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_url.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api_url.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constants/api_url.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -176,9 +175,9 @@
         <option value="$PROJECT_DIR$/src/components/WeatherLocation2/WeatherTemperature.js" />
         <option value="$PROJECT_DIR$/src/components/WeatherLocation2/WeatherExtraInfo.js" />
         <option value="$PROJECT_DIR$/src/components/WeatherLocation2/WeatherData/index.js" />
-        <option value="$PROJECT_DIR$/src/components/WeatherLocation2/index.js" />
         <option value="$PROJECT_DIR$/src/services/transformWeather.js" />
         <option value="$PROJECT_DIR$/src/constants/api_url.js" />
+        <option value="$PROJECT_DIR$/src/components/WeatherLocation2/index.js" />
       </list>
     </option>
   </component>
@@ -479,12 +478,12 @@
       <workItem from="1571628455776" duration="354000" />
       <workItem from="1573011155598" duration="1465000" />
       <workItem from="1575741487490" duration="1370000" />
-      <workItem from="1575812710872" duration="14249000" />
+      <workItem from="1575812710872" duration="14666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40935000" />
+    <option name="totallyTimeSpent" value="41352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1600" y="-109" width="1600" height="877" extended-state="6" />
@@ -942,18 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <marker date="1575833939000" expanded="true" signature="1402:1598" ph="..." />
-            <marker date="1575833939000" expanded="true" signature="1446:1592" ph="..." />
-            <marker date="1575833939000" expanded="true" signature="1493:1592" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/weather.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -977,6 +964,19 @@
         <state relative-caret-position="90">
           <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1575834483000" expanded="true" signature="1541:1737" ph="..." />
+            <marker date="1575834483000" expanded="true" signature="1585:1731" ph="..." />
+            <marker date="1575834483000" expanded="true" signature="1632:1731" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

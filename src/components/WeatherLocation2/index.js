@@ -13,12 +13,7 @@ const data = {
     humidity: 10,
     wind: '10m/s'
 }
-const data2 = {
-    temperature: 1000,
-    weatherState: SUN,
-    humidity: 1000,
-    wind: '500m/s'
-}
+
 
 
 
@@ -32,6 +27,18 @@ class WeatherLocation extends Component{
             city: 'Santiago',
             data: data,
         }
+        console.log("constructor")
+    }
+
+    componentDidMount(){
+        console.log("componentDidMount")
+
+
+    }
+    componentDidUpdate(prevProps, prevState){
+        console.log("componentDidUpdate")
+
+
     }
 
 
@@ -52,16 +59,18 @@ class WeatherLocation extends Component{
 
         })
         console.log("Actualizado")
-        this.setState({
+       /* this.setState({
                 city: "Montevideo",
                 data: data2
             }
-        );
+        );*/
         }
 
 
     render() {
         const {city, data}=this.state;
+        console.log("render")
+
         return(
                 <div className="weatherLocationCont">
                     <Location city={city}/>
