@@ -4,7 +4,7 @@ import React from 'react';
 const Location = (props) => {
     //Destructuring
 
-    const { city } = props;
+    const {city} = props;
 
 
     //Sin Destructuring
@@ -14,8 +14,6 @@ const Location = (props) => {
 
     return (<div><h1>{city} <br/> Buenos Aires</h1></div>)
 };
-
-
 
 
 export default Location;
