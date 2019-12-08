@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 
 const strToComponent = cities => (
-    cities.map(city=> <WeatherLocation city={city}/>)
+    cities.map((city )=> <WeatherLocation key = {city} city={city}/>)
 )
 
 const LocationList = ( { cities }) =>{

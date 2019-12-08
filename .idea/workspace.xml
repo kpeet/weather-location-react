@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4593de89-6b0e-49e0-a2ca-a30577f5fb8e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherLocation2/LocationList.js" afterPath="$PROJECT_DIR$/src/components/WeatherLocation2/LocationList.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="LocationList.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/LocationList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="105">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -485,12 +484,12 @@
       <workItem from="1571628455776" duration="354000" />
       <workItem from="1573011155598" duration="1465000" />
       <workItem from="1575741487490" duration="1370000" />
-      <workItem from="1575812710872" duration="21302000" />
+      <workItem from="1575812710872" duration="21976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47988000" />
+    <option name="totallyTimeSpent" value="48662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1600" y="-109" width="1600" height="877" extended-state="6" />
@@ -983,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/LocationList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
