@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4593de89-6b0e-49e0-a2ca-a30577f5fb8e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherLocation2/Location.js" afterPath="$PROJECT_DIR$/src/components/WeatherLocation2/Location.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/WeatherLocation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -95,8 +94,8 @@
       <file leaf-file-name="Location.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/Location.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="210">
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -444,12 +443,12 @@
       <workItem from="1571628455776" duration="354000" />
       <workItem from="1573011155598" duration="1465000" />
       <workItem from="1575741487490" duration="1370000" />
-      <workItem from="1575812710872" duration="2334000" />
+      <workItem from="1575812710872" duration="2538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29020000" />
+    <option name="totallyTimeSpent" value="29224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1600" y="-109" width="1600" height="877" extended-state="6" />
@@ -926,7 +925,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/WeatherLocation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -935,8 +934,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/Location.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="210">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
