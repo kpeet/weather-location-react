@@ -10,12 +10,19 @@ const data = {
     humidity: 10,
     wind: '10m/s'
 }
+const data2 = {
+    temperature: 1000,
+    weatherState: SUN,
+    humidity: 1000,
+    wind: '500m/s'
+}
 
 
 class WeatherLocation extends Component{
 
     constructor(){
         super()
+        //Esta invocacion solo puede ser usada en el constructor
         this.state={
             city: 'Santiago',
             data: data,
@@ -24,14 +31,20 @@ class WeatherLocation extends Component{
 
     handleUpdateClick = () =>{
        console.log("Actualizado")
-        };
+        this.setState({
+                city: "Montevideo",
+                data: data2
+            }
+        );
+        }
 
 
     render() {
+        const {city, data}=this.state;
         return(
                 <div className="weatherLocationCont">
-                    <Location city={this.state.city}/>
-                    <WeatherData data={this.state.data}/>
+                    <Location city={city}/>
+                    <WeatherData data={data}/>
 
                     <button onClick={this.handleUpdateClick}>Actualizar</button>
                 </div>
