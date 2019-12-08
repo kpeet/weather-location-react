@@ -17,6 +17,12 @@ const data2 = {
     wind: '500m/s'
 }
 
+const location = "Buenos Aires, ar"
+const api_key = "f445f01ba4a7ed0327e5e7afd457b76d"
+const url_base_weather = "https://api.openweathermap.org/data/2.5/weather"
+
+const api_weather = `${url_base_weather}?q=${location}&appid=${api_key}`;
+
 
 class WeatherLocation extends Component{
 
@@ -30,7 +36,11 @@ class WeatherLocation extends Component{
     }
 
     handleUpdateClick = () =>{
-       console.log("Actualizado")
+        fetch(api_weather).then(resolve =>{
+            console.log(resolve)
+            return resolve.json();
+        })
+        console.log("Actualizado")
         this.setState({
                 city: "Montevideo",
                 data: data2
