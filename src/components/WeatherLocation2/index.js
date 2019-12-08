@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Location from './WeatherData/Location';
 import WeatherData from './WeatherData/index';
 import './styles.css'
 import {SUN, CLOUDY} from "../../constants/weather";
-const data={
+
+const data = {
     temperature: 15,
     weatherState: CLOUDY,
     humidity: 10,
@@ -11,13 +12,16 @@ const data={
 }
 
 
+class WeatherLocation extends Component{
+    render() {
+        return(
+                <div className="weatherLocationCont">
+                <Location city={"Buenos Aires"}/>
+                <WeatherData data={data}/>
+                </div>);
+                }
 
-const WeatherLocation = () =>  (
-    <div className="weatherLocationCont">
-        <Location city={"Buenos Aires"}/>
-        <WeatherData data={data}/>
-    </div>
-)
+}
 
 
 export default WeatherLocation;
