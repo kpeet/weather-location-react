@@ -17,12 +17,12 @@ const data={
     wind: '10m/s'
 }
 
-const data2={
-    temperature: 15,
-    weatherState: WINDY,
-    humidity: 20,
-    wind: '30m/s'
-}
+// const data2={
+//     temperature: 15,
+//     weatherState: WINDY,
+//     humidity: 20,
+//     wind: '30m/s'
+// }
 
 class WeatherLocation extends Component{
 
@@ -34,20 +34,42 @@ class WeatherLocation extends Component{
         };
     }
 
+    getData = weather_data => {
+        const humidity = weather_data.count;
+
+       // const { speed } = weather_data.wind;
+       // const weatherState = SUN;
+
+        // const data = {
+        //     humidity,
+        //
+        //     weatherState,
+        //     //wind: `${speed} m/s`,
+        // }
+
+        return humidity
+    }
+
     handleUpdateClick = () =>{
         fetch(account_engine_url).then(resolve =>{
 
             return resolve.json();
         }).then(data =>{
-            console.log(data);
+            const newWeather = this.getData(data);
+             this.setState ( {
+                 city: newWeather,
+                 data: newWeather,
+             });
+
+            console.log(newWeather);
             debugger;
         });
 
-        console.log("Actualizado");
-        this.setState ( {
-            city: "Buenos WENA",
-            data: data2,
-        });
+        // console.log("Actualizado");
+        // this.setState ( {
+        //     city: "Buenos WENA",
+        //     data: data2,
+        // });
 
     }
     render(){
