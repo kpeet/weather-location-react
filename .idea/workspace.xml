@@ -17,13 +17,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1575834483000" expanded="true" signature="1541:1737" ph="..." />
-                <marker date="1575834483000" expanded="true" signature="1585:1731" ph="..." />
-                <marker date="1575834483000" expanded="true" signature="1632:1731" ph="..." />
+                <marker date="1575835011000" expanded="true" signature="1421:1711" ph="..." />
+                <marker date="1575835011000" expanded="true" signature="1465:1705" ph="..." />
+                <marker date="1575835011000" expanded="true" signature="1545:1705" ph="..." />
               </folding>
             </state>
           </provider>
@@ -478,12 +478,12 @@
       <workItem from="1571628455776" duration="354000" />
       <workItem from="1573011155598" duration="1465000" />
       <workItem from="1575741487490" duration="1370000" />
-      <workItem from="1575812710872" duration="14666000" />
+      <workItem from="1575812710872" duration="15207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41352000" />
+    <option name="totallyTimeSpent" value="41893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1600" y="-109" width="1600" height="877" extended-state="6" />
@@ -969,13 +969,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="312">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1575834483000" expanded="true" signature="1541:1737" ph="..." />
-            <marker date="1575834483000" expanded="true" signature="1585:1731" ph="..." />
-            <marker date="1575834483000" expanded="true" signature="1632:1731" ph="..." />
+            <marker date="1575835011000" expanded="true" signature="1421:1711" ph="..." />
+            <marker date="1575835011000" expanded="true" signature="1465:1705" ph="..." />
+            <marker date="1575835011000" expanded="true" signature="1545:1705" ph="..." />
           </folding>
         </state>
       </provider>
