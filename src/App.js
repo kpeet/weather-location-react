@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import WeatherLocation from './components/WeatherLocation/WeatherLocation'
-import WeatherLocation from './components/WeatherLocation2/WeatherLocation'
+import WeatherLocation from './components/WeatherLocation2/index'
 import Location from './components/WeatherLocation/Location'
 import './App.css';
 
