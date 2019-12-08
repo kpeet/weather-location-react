@@ -39,10 +39,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="355">
+              <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <marker date="1575831422000" expanded="true" signature="1950:2146" ph="..." />
+                <marker date="1575831422000" expanded="true" signature="1994:2140" ph="..." />
+                <marker date="1575831422000" expanded="true" signature="2041:2140" ph="..." />
               </folding>
             </state>
           </provider>
@@ -486,12 +489,12 @@
       <workItem from="1571628455776" duration="354000" />
       <workItem from="1573011155598" duration="1465000" />
       <workItem from="1575741487490" duration="1370000" />
-      <workItem from="1575812710872" duration="11623000" />
+      <workItem from="1575812710872" duration="12491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38309000" />
+    <option name="totallyTimeSpent" value="39177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1600" y="-109" width="1600" height="877" extended-state="6" />
@@ -979,10 +982,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/WeatherLocation2/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="355">
+          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <marker date="1575831422000" expanded="true" signature="1950:2146" ph="..." />
+            <marker date="1575831422000" expanded="true" signature="1994:2140" ph="..." />
+            <marker date="1575831422000" expanded="true" signature="2041:2140" ph="..." />
           </folding>
         </state>
       </provider>

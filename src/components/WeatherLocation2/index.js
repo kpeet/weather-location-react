@@ -35,10 +35,38 @@ class WeatherLocation extends Component{
         }
     }
 
+    getWeatherState = weather_data => {
+        return SUN;
+    }
+
+    getData = weather_data => {
+        const {humidity, temp} = weather_data.main;
+        const {speed } = weather_data.wind;
+        const weatherState = this.getWeatherState(weather_data);
+
+        const data = {
+            temperature: temp,
+            weatherState,
+            humidity,
+            wind: `${ speed} m/s`
+        }
+        return data
+    }
+
     handleUpdateClick = () =>{
         fetch(api_weather).then(resolve =>{
             console.log(resolve)
             return resolve.json();
+        }).then(data => {
+            const newWeather = this.getData(data);
+
+            console.log(newWeather)
+            this.setState({
+                data: newWeather
+            })
+
+
+
         })
         console.log("Actualizado")
         this.setState({
