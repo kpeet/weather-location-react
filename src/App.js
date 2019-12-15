@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'; // v1.x
 
-import LocationList from './components/WeatherLocation2/LocationList'
+import LocationList from './components/LocationList'
+import ForecastExtended from './components/ForecastExtended';
 
 import './App.css';
 
@@ -18,11 +19,21 @@ const cities = [
 
 class App extends Component {
 
+
+    constructor(){
+        super();
+
+        //Este ripo de declaración solo se puede hacer en el constructor
+        this.state = { city: 'Selecciona una ciudad'}
+    }
+
     handleSelectionLocation = city => {
     console.log("handleSelectionLocation"+city)
     }
 
   render() {
+
+        const { city }= this.state;
 
     return (
         <Grid>
@@ -38,7 +49,11 @@ class App extends Component {
                     </LocationList>
                 </Col>
                 <Col xs={12} md={6}>
-                    <div className='details'></div>
+                    <div className='details'>
+                    <ForecastExtended city={city} >
+
+                    </ForecastExtended>
+                    </div>
                 </Col>
             </Row>
         </Grid>

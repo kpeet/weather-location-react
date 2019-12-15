@@ -1,6 +1,7 @@
 import React from 'react';
-import WeatherLocation from '../WeatherLocation2'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import WeatherLocation from './WeatherLocation2/index';
+
 
 
 
