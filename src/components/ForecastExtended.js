@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import './styles.css';
 
 class ForecastExtended extends Component {
 
@@ -13,6 +15,10 @@ class ForecastExtended extends Component {
 
             </div>);
     }
+}
+
+ForecastExtended.propTypes = {
+    city: PropTypes.string.isRequired,
 }
 
 export default ForecastExtended;
