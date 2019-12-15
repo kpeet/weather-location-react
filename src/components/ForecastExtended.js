@@ -17,11 +17,29 @@ const data = {
     wind: 'normal',
 }
 
+export const api_key = "f445f01ba4a7ed0327e5e7afd457b76d"
+export const url_base_weather = "https://api.openweathermap.org/data/2.5/forecast"
+
 class ForecastExtended extends Component {
 
     constructor(){
         super();
         this.state = { forecatsData: null }
+    }
+
+    componentDidMount(){
+        //fetch or axios
+        const url_forecast = `${url_base_weather}?q=${this.props.city}&appid=${api_key}`;
+
+        fetch(url_forecast).then(
+            data=>(data.json())
+        ).then(
+            weather_data => {
+                console.log(weather_data)
+            }
+        )
+
+
     }
 
     renderForecatItemDay(){
