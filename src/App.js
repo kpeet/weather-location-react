@@ -23,11 +23,12 @@ class App extends Component {
     constructor(){
         super();
 
-        //Este ripo de declaración solo se puede hacer en el constructor
+        //Este tipo de declaración ( this.state = { algo })solo se puede hacer en el constructor
         this.state = { city: 'Selecciona una ciudad'}
     }
 
     handleSelectionLocation = city => {
+        this.setState({city })
     console.log("handleSelectionLocation"+city)
     }
 
