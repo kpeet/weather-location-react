@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ForecastItem from './ForecastItem';
+import transforForecast from './../services/transformForecast';
 import './styles.css';
 
 
@@ -24,7 +25,7 @@ class ForecastExtended extends Component {
 
     constructor(){
         super();
-        this.state = { forecatsData: null }
+        this.state = { forecastData: null }
     }
 
     componentDidMount(){
@@ -36,6 +37,12 @@ class ForecastExtended extends Component {
         ).then(
             weather_data => {
                 console.log(weather_data)
+                const forecast_data = transforForecast(weather_data);
+                console.log("forecastData");
+                console.log(forecast_data);
+                this.setState( {forecastData: forecast_data} )
+                console.log("forecastData");
+                console.log(this.state.forecastData);
             }
         )
 
@@ -43,7 +50,8 @@ class ForecastExtended extends Component {
     }
 
     renderForecatItemDay(){
-        return days.map( day =>  ( <ForecastItem weekDay = {day} hour={10} data={data} ></ForecastItem>));
+        return "Render Items"
+       // return days.map( day =>  ( <ForecastItem weekDay = {day} hour={10} data={data} ></ForecastItem>));
 
     }
     renderProgress = () => {
@@ -53,19 +61,20 @@ class ForecastExtended extends Component {
 
     render(){
         // es casi lo mismo a const { city } = this.props; aqui estoy haciendo Destructuring
-        const city = this.props.city;
-        const forecatsData = this.props.forecatsData;
+        const {city} = this.props;
+        const {forecastData} = this.state;
+        console.log("RENDER!!!");
+        console.log(this.props);
 
-        return (<div className={'forecastTitle'}>
-            <h2  >Pronóstico Extendido para { city } </h2>
-            { forecatsData ?
+        return (<div className='forecastTitle'>
+                    <h2  >Pronóstico Extendido para { city } </h2>
 
-                this.renderForecatItemDay():
-                this.renderProgress()
-            }
+                        { forecastData ?
 
-
-            </div>);
+                            this.renderForecatItemDay():
+                            this.renderProgress()
+                        }
+                </div>);
     }
 }
 
