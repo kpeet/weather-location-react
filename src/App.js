@@ -24,7 +24,7 @@ class App extends Component {
         super();
 
         //Este tipo de declaración ( this.state = { algo })solo se puede hacer en el constructor
-        this.state = { city: 'Selecciona una ciudad'}
+        this.state = { city: null }
     }
 
     handleSelectionLocation = city => {
@@ -51,9 +51,14 @@ class App extends Component {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className='details'>
-                    <ForecastExtended city={city} >
+                        {
+                            !city ? // es lo mismo que city === null
+                                <h1>No se selecciono ciudad</h1>:
+                                <ForecastExtended city={city} >
 
-                    </ForecastExtended>
+                                </ForecastExtended>
+                        }
+
                     </div>
                 </Col>
             </Row>
