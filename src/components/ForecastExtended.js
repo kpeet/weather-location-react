@@ -8,7 +8,10 @@ class ForecastExtended extends Component {
         // es casi lo mismo a const { city } = this.props; aqui estoy haciendo Destructuring
         const city = this.props.city;
 
-        return (<div>Pronóstico Extendido para { city }</div>);
+        return (<div className={'forecastTitle'}>
+            <h2  >Pronóstico Extendido para { city } </h2>
+
+            </div>);
     }
 }
 

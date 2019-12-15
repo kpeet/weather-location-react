@@ -58,14 +58,14 @@ class App extends Component {
 
                                 </ForecastExtended>
                         }
-                        /*
+                       /*
                         NOTA: Resultado igual al expresado arriba, pero si no existe city
                         arroja null, React entiende que null implica que no hay que renderizar, por lo tanto no muestra nada
                         {
                             city &&
                                 <ForecastExtended city={city} >
                                 </ForecastExtended>
-                        }*/
+                         } */
 
                     </div>
                 </Col>
