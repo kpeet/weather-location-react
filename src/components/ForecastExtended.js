@@ -29,8 +29,22 @@ class ForecastExtended extends Component {
     }
 
     componentDidMount(){
+        this.updateCity(this.props.city)
+
+
+    }
+
+    //Se ejecuta siempre que se modifica el componente excepto la primera vez, por esto es necesario utilizar el componentDidMount
+    componentWillReceiveProps(nextProps){
+        if(nextProps.city !== this.props.city){
+            this.setState( {forecastData: null});
+            this.updateCity(nextProps.city);
+        }
+    }
+
+    updateCity = city => {
         //fetch or axios
-        const url_forecast = `${url_base_weather}?q=${this.props.city}&appid=${api_key}`;
+        const url_forecast = `${url_base_weather}?q=${city}&appid=${api_key}`;
 
         fetch(url_forecast).then(
             data=>(data.json())
@@ -45,13 +59,17 @@ class ForecastExtended extends Component {
                 console.log(this.state.forecastData);
             }
         )
-
-
     }
 
-    renderForecatItemDay(){
-        return "Render Items"
-       // return days.map( day =>  ( <ForecastItem weekDay = {day} hour={10} data={data} ></ForecastItem>));
+    renderForecatItemDay(forecastData){
+
+        return forecastData.map( forecast =>  (
+            <ForecastItem
+                weekDay = {forecast.weekDay}
+                hour={forecast.hour}
+                data={forecast.data} >
+
+            </ForecastItem>));
 
     }
     renderProgress = () => {
@@ -71,7 +89,7 @@ class ForecastExtended extends Component {
 
                         { forecastData ?
 
-                            this.renderForecatItemDay():
+                            this.renderForecatItemDay(forecastData):
                             this.renderProgress()
                         }
                 </div>);
