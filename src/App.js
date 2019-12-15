@@ -51,22 +51,12 @@ class App extends Component {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className='details'>
-                        {
-                            !city ? // es lo mismo que city === null
-                                <h1>No se selecciono ciudad</h1>:
-                                <ForecastExtended city={city} >
 
-                                </ForecastExtended>
-                        }
-                       /*
-                        NOTA: Resultado igual al expresado arriba, pero si no existe city
-                        arroja null, React entiende que null implica que no hay que renderizar, por lo tanto no muestra nada
                         {
                             city &&
                                 <ForecastExtended city={city} >
                                 </ForecastExtended>
-                         } */
-
+                         }
                     </div>
                 </Col>
             </Row>
