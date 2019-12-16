@@ -4,7 +4,8 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'; // 
 
 import LocationList from './components/LocationList'
 import ForecastExtended from './components/ForecastExtended';
-import { createStore } from 'redux';
+import { setCity_actionCreator } from "./actions";
+import { store } from './store';
 
 import './App.css';
 
@@ -17,10 +18,6 @@ const cities = [
     "Barcelona, es",
 ];
 
-//Generando el primer store con redux
-const store = createStore(() => {} ,
-    //DECLARACION PARA QUE EXTENSION DEVTOOLS FUNCIONE CON EL NAVEGADOR CHROME
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
 class App extends Component {
@@ -37,10 +34,7 @@ class App extends Component {
         this.setState({city })
         console.log("handleSelectionLocation"+city);
 
-        //Primera accion
-        const action = { type: 'setCity', value: city };
-
-        store.dispatch(action);
+        store.dispatch(setCity_actionCreator(city));
     }
 
   render() {
