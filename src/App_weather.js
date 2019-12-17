@@ -7,11 +7,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'; // v1.x
 
 import LocationList from './components/LocationList'
-import OperationDetail from './retencion_components/OperationDetail';
-import RequesterDetail from './retencion_components/RequesterDetail';
-import RepactacionFrame from './retencion_components/RepactacionFrame';
-import AnticipoRepactacionList from './retencion_components/AnticipoRepactacionList';
-import DisplayRepactacion from './retencion_components/DisplayRepactacion';
+import ForecastExtended from './components/ForecastExtended';
 import { setCity_actionCreator } from "./actions";
 
 import './App.css';
@@ -43,6 +39,9 @@ class App extends Component {
         this.setState({ city })
         console.log("handleSelectionLocation"+city);
 
+        //store.dispatch(setCity_actionCreator(city));
+        //Inyeccion de propiedad tipo REDUX a App Component
+        this.props.dispatchSetCity(city);
 
     }
 
@@ -57,37 +56,22 @@ class App extends Component {
             </Row>
             <Row>
                 <Col xs={12} md={6}>
-                    <OperationDetail>
-                    </OperationDetail>
-                    <RequesterDetail>
-                    </RequesterDetail>
-
-
-                </Col>
-                <Col xs={12} md={6}>
-
-
-                    <RepactacionFrame
-                            key = {"uno"}
-                            city={"Alguna ciudad"}
-                            >
-                    </RepactacionFrame>
-                    <AnticipoRepactacionList>
-                    </AnticipoRepactacionList>
                     <LocationList
                         cities={cities}
                         onSelectedLocation={this.handleSelectionLocation}>
 
                     </LocationList>
-
                 </Col>
                 <Col xs={12} md={6}>
-                    <DisplayRepactacion>
+                    <div className='details'>
 
-                    </DisplayRepactacion>
+                        {
+                            city &&
+                                <ForecastExtended city={city} >
+                                </ForecastExtended>
+                         }
+                    </div>
                 </Col>
-
-
             </Row>
         </Grid>
 
@@ -113,13 +97,12 @@ class App extends Component {
 }
 
 
-/*
+
 const mapDispatchToPropsActions = dispatch => (
     {
     dispatchSetCity: value => dispatch(setCity_actionCreator(value))
 }
 );
 const AppConnected  = connect(null, mapDispatchToPropsActions)(App);
-*/
 
-export default App;
+export default AppConnected;
