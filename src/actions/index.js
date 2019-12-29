@@ -5,8 +5,8 @@ import transforForecast from "../services/transformForecast";
 export const  SET_CITY ='SET_CITY';
 export const  SET_FORECAST_DATA ='SET_FORECAST_DATA';
 
-export const setCity_actionCreator = value => (
-    {type: SET_CITY , value}
+export const setCity_actionCreator = payload => (
+    {type: SET_CITY , payload}
 );
 export const setForecastData = payload => (
     {type: SET_FORECAST_DATA, payload}

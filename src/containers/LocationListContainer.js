@@ -46,7 +46,7 @@ LocationListContainer.propTypes={
 // connect, es una funcion que espera por parametro dos funciones
 const mapDispatchToPropsActions = dispatch => ({
 //setCity1 es del tipo funcion que recibe un dispatch
-    setCity1: value => dispatch(setSelectedCity(value))
+    setCity1: payload => dispatch(setSelectedCity(payload))
 
 });
 
