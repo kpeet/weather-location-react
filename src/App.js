@@ -4,7 +4,8 @@ import {PropTypes} from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'; // v1.x
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import LocationListContainer from './containers/LocationListContainer'
-import ForecastExtended from './components/ForecastExtended';
+import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
+
 
 
 
@@ -24,16 +25,8 @@ const cities = [
 class App extends Component {
 
 
-    constructor(){
-        super();
-
-        //Este tipo de declaración ( this.state = { algo })solo se puede hacer en el constructor
-        this.state = { city: null }
-    }
 
   render() {
-
-        const { city }= this.state;
 
     return (
         <MuiThemeProvider>
@@ -52,11 +45,10 @@ class App extends Component {
                 <Col xs={12} md={6}>
                     <div className='details'>
 
-                        {
-                            city &&
-                                <ForecastExtended city={city} >
-                                </ForecastExtended>
-                         }
+
+                                <ForecastExtendedContainer  >
+                                </ForecastExtendedContainer>
+
                     </div>
                 </Col>
             </Row>

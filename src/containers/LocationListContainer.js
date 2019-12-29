@@ -4,6 +4,18 @@ import { connect } from 'react-redux';
 import { setCity_actionCreator } from "./../actions";
 import LocationList from './../components/LocationList'
 
+/*
+
+Connect (1, 2 )(Componet)
+
+1: MapStateToProps(values) => viene con el estado de la aplicacion, le devolvemos un objeto con
+ las propiedades que necesitamos y esas propiedades, connect las inyecta en el componente como props
+
+podemos acceder con this.props
+
+2: MapDispatchToProps(func) => le retornamos un objeto con funciones, que connect las va a vincular como funciones dentro del componente
+ */
+
 
 
 class LocationListContainer extends Component{
