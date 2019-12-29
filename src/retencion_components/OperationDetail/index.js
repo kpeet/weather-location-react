@@ -1,20 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WeatherData from './../../components/WeatherLocation2/WeatherData';
+import Paper from '@material-ui/core/Paper';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 
 
-const OperationDetail = ({ weekDay, hour, data }) => (
-    <div>
-     <div> OperationDetail { weekDay } hora : { hour } hs </div>
-
-    </div>
-
+const OperationDetail = ({  operation_id, operation_type }) =>
+    (
+        <Paper>
+    <Grid>
+        <Row>
+            <Col>
+                Operación: { operation_id }
+            </Col>
+            <Col >
+                Tipo operacion : { operation_type }
+            </Col>
+        </Row>
+    </Grid>
+        </Paper>
 );
 
 OperationDetail.prototype = {
-    weekday: PropTypes.string.isRequired,
-    hour: PropTypes.string.isRequired,
+    operation_id: PropTypes.string.isRequired,
+    operation_type: PropTypes.string.isRequired,
 
 }
 

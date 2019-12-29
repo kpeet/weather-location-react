@@ -1,13 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WeatherData from './../../components/WeatherLocation2/WeatherData';
+import Paper from '@material-ui/core/Paper';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import './styles.css'
 
 
 
-const RequesterDetail = ({ weekDay, hour, data }) => (
-    <div>
-     <div> RequesterDetail { weekDay } hora : { hour } hs </div>
-    </div>
+const RequesterDetail = () => (
+    <Paper >
+    <Grid>
+        <Row>
+            <Col>
+                <div>
+                    <div className="locationCont"> Datos del Solicitante:  </div>
+                </div>
+            </Col>
+        </Row>
+    </Grid>
+    </Paper>
+
 
 );
 

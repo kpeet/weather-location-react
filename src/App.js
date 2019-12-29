@@ -18,12 +18,13 @@ import './App.css';
 
 
 const cities = [
-    "Santiago, cl",
-    "Buenos Aires,ar",
-    "Bogota, col",
-    "Washington, us",
-    "Barcelona, es",
+    {"name": "Santiago, cl", "id": 1},
+    {"name": "Buenos Aires,ar", "id": 2},
+    {"name": "Bogota, col", "id": 3},
+    {"name": "Washington, us", "id": 4},
+    {"name": "Barcelona, es", "id": 5},
 ];
+
 
 
 
@@ -52,39 +53,38 @@ class App extends Component {
 
     return (
         <Grid>
+
             <Row>
-                Titulo
-            </Row>
-            <Row>
-                <Col xs={12} md={6}>
-                    <OperationDetail>
+                <Col xs={12} md={3}>
+                    <OperationDetail
+                        operation_id = {"1000102"}
+                        operation_type = {"Credito Factura"}
+                    >
                     </OperationDetail>
+                </Col>
+                <Col xs={12} md={9}>
                     <RequesterDetail>
                     </RequesterDetail>
-
-
                 </Col>
-                <Col xs={12} md={6}>
+            </Row>
+
+            <Row>
 
 
+                <Col xs={12} md={9}>
                     <RepactacionFrame
                             key = {"uno"}
                             city={"Alguna ciudad"}
                             >
                     </RepactacionFrame>
-                    <AnticipoRepactacionList>
-                    </AnticipoRepactacionList>
-                    <LocationList
-                        cities={cities}
-                        onSelectedLocation={this.handleSelectionLocation}>
-
-                    </LocationList>
 
                 </Col>
-                <Col xs={12} md={6}>
-                    <DisplayRepactacion>
+                <Col xs={12} md={3}>
+                    <AnticipoRepactacionList
+                        cities={cities} >
+                    </AnticipoRepactacionList>
 
-                    </DisplayRepactacion>
+
                 </Col>
 
 
@@ -92,7 +92,23 @@ class App extends Component {
         </Grid>
 
     );
-      {/*
+      {
+          /*
+                    <Col xs={12} md={6}>
+                        <DisplayRepactacion>
+
+                        </DisplayRepactacion>
+                    </Col>
+
+          /*
+      <LocationList
+                        cities={cities}
+                        onSelectedLocation={this.handleSelectionLocation}>
+
+                    </LocationList>
+
+
+
         <MuiThemeProvider>
             <Grid fluid>
                 <Row>
@@ -108,7 +124,8 @@ class App extends Component {
 
                 </Row>
             </Grid>
-            </MuiThemeProvider>*/}
+            </MuiThemeProvider>*/
+      }
   }
 }
 

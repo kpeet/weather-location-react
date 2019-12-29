@@ -21,6 +21,7 @@ class RepactacionFrame extends Component{
             description: city,
             operation_id:null,
             gloss: null,
+            amount: null,
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -29,7 +30,9 @@ class RepactacionFrame extends Component{
 
     }
 
-    handleChange(event) {
+    handleChange(event, targetSetState) {
+        console.log("event.target")
+        console.log(event.target)
         this.setState({description: event.target.value});
         console.log("this.state.city")
         console.log(this.state.city)
@@ -37,6 +40,11 @@ class RepactacionFrame extends Component{
 
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.description);
+        this.setState({description: this.state.description});
+        this.setState({operation_id: this.state.operation_id});
+        this.setState({amount: this.state.amount});
+        console.log("this.state")
+        console.log(this.state)
         event.preventDefault();
     }
 
@@ -52,9 +60,6 @@ class RepactacionFrame extends Component{
 
 
     }
-
-
-
     handleUpdateClick = () =>{
         console.log("Actualizado");
         this.setState ( {
@@ -99,10 +104,10 @@ class RepactacionFrame extends Component{
         const {onWeatherLocationClick} = this.props
 
         return(
-            <div >
+                <form onSubmit={this.handleSubmit}>
                 <Paper >
-                    <Grid container spacing={2}>
-                        <Grid item>
+                    <Grid container >
+                        <Grid >
                             <ButtonBase>
                                 <img  alt="complex" src="/static/images/grid/complex.jpg" />
                             </ButtonBase>
@@ -115,7 +120,7 @@ class RepactacionFrame extends Component{
                                     </Typography>
                                     <Typography variant="body2" gutterBottom>
                                         <TextField
-                                            value={this.state.city}
+                                            value={this.state.description}
                                             required
                                             id="filled-required"
                                             label="Descripción"
@@ -130,6 +135,7 @@ class RepactacionFrame extends Component{
                                         <InputLabel htmlFor="my-input">Monto</InputLabel>
                                         <Input id="my-input"
                                                type="number"
+                                               value={this.state.amount}
                                                aria-describedby="my-helper-text"
                                                variant="filled"
                                                InputLabelProps={{
@@ -140,7 +146,7 @@ class RepactacionFrame extends Component{
 
                                     <Typography variant="body2" color="textSecondary">
                                         <TextField
-                                            value={this.state.city}
+                                            value={this.state.operation_id}
                                             required
                                             id="filled-required"
                                             label="ID Operación"
@@ -165,6 +171,14 @@ class RepactacionFrame extends Component{
                                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
                                         Remove
                                     </Typography>
+
+                                        Boton agregar
+                                        <button onClick={this.handleUpdateClick}>Actualizar</button>
+                                        <button onClick={this.handleSubmit}>Actualizar2</button>
+
+                                        <input type="submit" value="Submit" />
+
+
                                 </Grid>
                             </Grid>
                             <Grid item>
@@ -174,7 +188,8 @@ class RepactacionFrame extends Component{
 
                     </Grid>
                 </Paper>
-            </div>
+                </form>
+
 
 
         );
@@ -191,84 +206,3 @@ RepactacionFrame.propTypes ={
 
 
 export default RepactacionFrame;
-
-/*
- <Grid>
-                <form onSubmit={this.handleSubmit}>
-                <Row>
-                    Nueva Repactación
-                </Row>
-                <Row>
-                    <Col xs={12} md={6}>
-                        <Row>
-                            <Col>
-                                TEXTO INPUT
-                                <input type="text" value={this.state.city} onChange={this.handleChange} />
-                            </Col>
-                            <Col>
-                                ID OPERACION
-                            </Col>
-                            <Col>
-                                DETALLES GLOSA
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col xs={12} md={3}>
-                        Definicion Kimchi Admin Redio Button
-
-                    </Col>
-                    <Col xs={12} md={3}>
-                        Boton agregar
-                        <button onClick={this.handleUpdateClick}>Actualizar</button>
-                        <input type="submit" value="Submit" />
-
-
-
-                    </Col>
-                    <Col>
-                        <div>
-                            <FormControl onSubmit={this.handleSubmit}>
-                                <InputLabel htmlFor="my-input">Monto</InputLabel>
-                                <Input id="my-input"
-                                       type="number"
-                                       aria-describedby="my-helper-text"
-                                       variant="filled"
-                                       InputLabelProps={{
-                                            shrink: true,
-                                                        }}
-                                />
-                                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-                                <TextField
-                                    value={this.state.city}
-                                    required
-                                    id="filled-required"
-                                    label="ID Operación"
-                                    defaultValue=""
-                                    variant="filled"
-                                    onChange={this.handleChange}
-                                />
-                                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-                                <TextField
-                                    required
-                                    id="filled-required"
-                                    label="Detalle Glosa"
-                                    defaultValue=""
-                                    variant="filled"
-                                />
-                                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-
-                                <input type="submit" value="Submit" />
-
-                            </FormControl>
-                        </div>
-                    </Col>
-
-
-
-                </Row>
-
-                </form>
-            </Grid>
- */
-
-
