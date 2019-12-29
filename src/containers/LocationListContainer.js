@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { setCity_actionCreator } from "./../actions";
+import { setSelectedCity } from "./../actions";
 import LocationList from './../components/LocationList'
 
 /*
@@ -46,7 +46,7 @@ LocationListContainer.propTypes={
 // connect, es una funcion que espera por parametro dos funciones
 const mapDispatchToPropsActions = dispatch => ({
 //setCity1 es del tipo funcion que recibe un dispatch
-    setCity1: value => dispatch(setCity_actionCreator(value))
+    setCity1: value => dispatch(setSelectedCity(value))
 
 });
 
